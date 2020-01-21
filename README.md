@@ -16,16 +16,21 @@ La partie features engineering n'étant pas la partie la plus importante de ce p
 
 <u>Dans ce dépôt, vous trouverez :</u>
 
- - Un Notebook Jupyter pour l'entraînement et la configuration du modèle de classification.
- - Une note technique qui explique en détails la construction et les résultats du modèle.
- - Un fichier .py contenant le DashBoard.
- - Un fichier .py contenant l'API.
+ - Un dossier avec le Notebook Jupyter pour l'étude des données, l'entraînement et la configuration du modèle de classification.
+ - Un dossier avec la note technique qui explique en détails la construction et les résultats du modèle.
+ - Un dossier avec la configuration locale de l'API. Dans le but de comprendre le fonctionnement de Flask, cette "version" de l'API s'appuie sur deux fichiers .py :
+    - API.py qui est le fichier Flask contenant la partie backend.
+    - DASHBOARD.py contient la partie Frontend codée avec Streamlit.
+ - Un dossier avec la configuration déployée sur Azure. Cette version n'utilise que Streamlit qui a l'avantage d'être très simple à coder, et qui contient Tornado, un serveur web concurrent de Flask.
 
 ## Modèle de classification
 Le modèle retenu pour cet exercice est le modèle XGBoost. Cependant les résultats ne sont pas bons, et ceci est en partie dû au features engineering qui n'est pas assez abouti car il ne s'appuie pas sur les données qui peuvent être très utiles à notre problème. J'aurais dû utiliser un notebook plus approprié.
 
 ## Dashboard / API
-La partie dashboard a été codée via la librairie Streamlit et l'api via Flask.
+J'ai utilisé deux librairies Python pour ce sujet :
+ - Flask
+ - Streamlit
 
 ## Données d'entrées
-Lien de téléchargement des données d'entrées : https://www.kaggle.com/c/home-credit-default-risk/data Notebook de départ pour la partie Features Engineering : https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction
+ - Lien de téléchargement des données d'entrées : https://www.kaggle.com/c/home-credit-default-risk/data 
+ - Notebook de départ pour la partie Features Engineering : https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction
